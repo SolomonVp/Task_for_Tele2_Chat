@@ -1,1 +1,5 @@
-D:\Java\Projects\Tasks\Tele2Chat\ChatForTele2\src\main\java\servlets\MainServlet.java
+src\main\java\coders\MessageEncoder.java
+src\main\java\coders\MessageDecoder.java
+src\main\java\servlets\MainServlet.java
+src\main\java\endpoints\ChatEndpoint.java
+src\main\java\entities\Message.java
