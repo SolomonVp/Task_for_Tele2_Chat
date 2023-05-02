@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-@ServerEndpoint(value = "/sock", decoders = {MessageDecoder.class}, encoders = {MessageEncoder.class})
+@ServerEndpoint(value = "/chat", decoders = {MessageDecoder.class}, encoders = {MessageEncoder.class})
 public class ChatEndpoint {
 
     private Session session = null;
@@ -35,7 +35,7 @@ public class ChatEndpoint {
     @OnMessage
     public void onMessage(Session session, Message msg) {
         sessionList.forEach(s -> {
-                    if(s == this.session) return;
+            if (s == this.session) return;
             try {
                 s.getBasicRemote().sendObject(msg);
             } catch (IOException | EncodeException e) {
